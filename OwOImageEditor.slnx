@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="OwOImageEditor.Core/OwOImageEditor.Core.csproj" />
+  <Project Path="OwOImageEditor.UI/OwOImageEditor.UI.csproj" />
+</Solution>
