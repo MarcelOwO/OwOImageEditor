@@ -4,7 +4,7 @@
     <vm:SetupViewModel/>
   </Design.DataContext>
   <DockPanel LastChildFill="True">
-    <Border Height="25" Background="#0000FF" BorderBrush="Black" BorderThickness="1">
+    <Border Background="#0000FF" BorderBrush="Black" BorderThickness="1">
       <TextBlock>
         Setup
         </TextBlock>

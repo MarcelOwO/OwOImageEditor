@@ -4,7 +4,7 @@
     <vm:EditViewModel/>
   </Design.DataContext>
   <DockPanel LastChildFill="True">
-    <Border Height="25" Background="#FF0000" BorderBrush="Black" BorderThickness="1">
+    <Border Background="#FF0000" BorderBrush="Black" BorderThickness="1">
       <TextBlock>
         Edit
         </TextBlock>

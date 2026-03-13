@@ -4,10 +4,10 @@
     <vm:SettingsViewModel/>
   </Design.DataContext>
   <DockPanel LastChildFill="True">
-    <Border Height="25" Background="#00FF00" BorderBrush="Black" BorderThickness="1">
+    <Border Background="#00FF00" BorderBrush="Black" BorderThickness="1">
       <TextBlock>
         Settings
-        </TextBlock>
+      </TextBlock>
     </Border>
   </DockPanel>
 </UserControl>
