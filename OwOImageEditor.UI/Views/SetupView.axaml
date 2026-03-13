@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="using:OwOImageEditor.UI.ViewModels" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:int="using:OwOImageEditor.UI.Interfaces" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" x:Class="OwOImageEditor.UI.Views.SetupView" x:DataType="vm:MainLayoutViewModel">
+  <Design.DataContext>
+    <vm:SetupViewModel/>
+  </Design.DataContext>
+  <DockPanel LastChildFill="True">
+    <Border Height="25" Background="#0000FF" BorderBrush="Black" BorderThickness="1">
+      <TextBlock>
+        Setup
+        </TextBlock>
+    </Border>
+  </DockPanel>
+</UserControl>

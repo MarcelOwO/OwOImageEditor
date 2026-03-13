@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="using:OwOImageEditor.UI.ViewModels" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:int="using:OwOImageEditor.UI.Interfaces" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" x:Class="OwOImageEditor.UI.Views.MainLayoutView" x:DataType="vm:MainLayoutViewModel">
+  <Design.DataContext>
+    <vm:MainLayoutViewModel/>
+  </Design.DataContext>
+  <DockPanel LastChildFill="True">
+    <Border Height="45" Background="#222222" BorderBrush="Black" BorderThickness="5" DockPanel.Dock="Top">
+      <DockPanel>
+        <TextBlock DockPanel.Dock="Left" Text="OwOImageEditor"/>
+        <ItemsControl DockPanel.Dock="Right" ItemsSource="{Binding Modules}">
+          <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+              <StackPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+          </ItemsControl.ItemsPanel>
+          <ItemsControl.ItemTemplate>
+            <DataTemplate DataType="int:IModule">
+              <Button Content="{Binding Name}" Command="{Binding $parent[ItemsControl].((vm:MainLayoutViewModel)DataContext).SelectModuleCommand}" CommandParameter="{Binding}" HorizontalAlignment="Stretch" Margin="2"/>
+            </DataTemplate>
+          </ItemsControl.ItemTemplate>
+        </ItemsControl>
+      </DockPanel>
+    </Border>
+    <Border Background="#222222" BorderBrush="Black" BorderThickness="5">
+      <ContentControl Content="{Binding ActiveModule.ViewModel}"/>
+    </Border>
+  </DockPanel>
+</UserControl>

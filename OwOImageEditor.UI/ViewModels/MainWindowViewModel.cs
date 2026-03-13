@@ -1,6 +1,14 @@
-﻿namespace OwOImageEditor.UI.ViewModels;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace OwOImageEditor.UI.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    public string Greeting { get; } = "Welcome to Avalonia!";
+    [ObservableProperty]
+    private ViewModelBase _currentContent;
+
+    public MainWindowViewModel(MainLayoutViewModel mainLayout)
+    {
+        _currentContent = mainLayout;
+    }
 }
